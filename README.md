@@ -66,86 +66,86 @@ The table below outlines leading commercial SaaS and cloud-managed endpoint mana
 
 The following curated open-source projects provide native Android screen mirroring, Apple MDM services, reverse tethering, containerized Android instances, and multi-device testing farms. 
 
-Repos are sorted in descending order by **GitHub Star Counts** ⭐.
+Repos are sorted in descending order by **GitHub Stars_Counts** ⭐.
 
-### 1. [scrcpy](https://github.com/Genymobile/scrcpy) [![GitHub stars](https://img.shields.io/github/stars/Genymobile/scrcpy?style=social&color=white)](https://github.com/Genymobile/scrcpy/stargazers)
+### 1. [scrcpy](https://github.com/Genymobile/scrcpy) [![GitHub_Stars](https://img.shields.io/github/stars/Genymobile/scrcpy?style=social&color=white)](https://github.com/Genymobile/scrcpy/stargazers)
 - 📌 **Description**: The industry standard for native Android screen mirroring and control over USB or TCP/IP. Requires no root, no app installed on the device, no accounts, and no internet connection.
 - ⚡ **Performance**: 30–120 FPS, 1920×1080+ native resolution, 35–70 ms ultra-low latency, and ~1-second instant startup.
 - 🛠️ **Core Features**: Audio forwarding (Android 11+), video recording, screen-off mirroring, bidirectional clipboard copy-paste, virtual secondary display, camera mirroring (Android 12+), Linux webcam emulation (v4l2), physical HID keyboard/mouse simulation, and USB OTG mode.
 - 🎯 **Best For**: Developers, automation engineers, and security-conscious users seeking the fastest, cleanest, non-intrusive Android device bridge.
 
-### 2. [QtScrcpy](https://github.com/barry-ran/QtScrcpy) [![GitHub stars](https://img.shields.io/github/stars/barry-ran/QtScrcpy?style=social&color=white)](https://github.com/barry-ran/QtScrcpy/stargazers)
+### 2. [QtScrcpy](https://github.com/barry-ran/QtScrcpy) [![GitHub_Stars](https://img.shields.io/github/stars/barry-ran/QtScrcpy?style=social&color=white)](https://github.com/barry-ran/QtScrcpy/stargazers)
 - 📌 **Description**: High-performance, cross-platform Android control engine with a native C++ / Qt GUI layer.
 - ⚡ **Performance**: Direct C++ implementation matching native scrcpy low latency with configurable H.264/H.265 bitrates.
 - 🛠️ **Core Features**: Multi-device batch management, custom key-mapping (play Android mobile games using keyboard and mouse without emulators), macro recording, customizable shortcut panels, and background batch script execution.
 - 🎯 **Best For**: Gamers, QA test automation teams, and power users needing simultaneous multi-device controls without typing terminal commands.
 
-### 3. [STF (Smartphone Test Farm)](https://github.com/openstf/stf) [![GitHub stars](https://img.shields.io/github/stars/openstf/stf?style=social&color=white)](https://github.com/openstf/stf/stargazers)
+### 3. [STF (Smartphone Test Farm)](https://github.com/openstf/stf) [![GitHub_Stars](https://img.shields.io/github/stars/openstf/stf?style=social&color=white)](https://github.com/openstf/stf/stargazers)
 - 📌 **Description**: Cloud-native, browser-based physical smartphone test farm designed to control, debug, and monitor Android and iOS devices remotely.
 - ⚡ **Performance**: Real-time remote browser display over WebSockets with device pool allocation and queue management.
 - 🛠️ **Core Features**: Interactive touch input from web browser, remote ADB connect forwarder, automated APK installation, shell execution, device logcat viewing, and REST API for CI/CD test harness integration.
 - 🎯 **Best For**: Enterprise QA teams, mobile DevOps pipelines, and organizations maintaining self-hosted physical device clouds.
 
-### 4. [escrcpy](https://github.com/viarotel-org/escrcpy) [![GitHub stars](https://img.shields.io/github/stars/viarotel-org/escrcpy?style=social&color=white)](https://github.com/viarotel-org/escrcpy/stargazers)
+### 4. [escrcpy](https://github.com/viarotel-org/escrcpy) [![GitHub_Stars](https://img.shields.io/github/stars/viarotel-org/escrcpy?style=social&color=white)](https://github.com/viarotel-org/escrcpy/stargazers)
 - 📌 **Description**: Polished, modern graphical client for scrcpy powered by Electron, Vue.js, and TypeScript.
 - ⚡ **Performance**: Wraps native scrcpy streaming binaries while providing a modern, visual control panel.
 - 🛠️ **Core Features**: Device connection manager, wireless IP scanner and one-click pairing, audio toggle switches, configurable bitrate/resolution profiles, window framing, and screenshot/recording managers.
 - 🎯 **Best For**: End users and developers who prefer an intuitive, modern desktop UI over command-line terminal arguments.
 
-### 5. [gnirehtet](https://github.com/Genymobile/gnirehtet) [![GitHub stars](https://img.shields.io/github/stars/Genymobile/gnirehtet?style=social&color=white)](https://github.com/Genymobile/gnirehtet/stargazers)
+### 5. [gnirehtet](https://github.com/Genymobile/gnirehtet) [![GitHub_Stars](https://img.shields.io/github/stars/Genymobile/gnirehtet?style=social&color=white)](https://github.com/Genymobile/gnirehtet/stargazers)
 - 📌 **Description**: High-speed reverse tethering for Android over USB. Provides internet access from the host PC to an Android device.
 - ⚡ **Performance**: Native Rust and Java implementation leveraging Android VPN service APIs for near-line-speed networking.
 - 🛠️ **Core Features**: Requires no root access, works across Linux, macOS, and Windows, automatically injects routing rules, and seamlessly keeps devices online in air-gapped test labs.
 - 🎯 **Best For**: Testing mobile devices in Faraday cages, isolated corporate networks, or labs lacking Wi-Fi coverage.
 
-### 6. [redroid (Remote Android in Docker)](https://github.com/remote-android/redroid-doc) [![GitHub stars](https://img.shields.io/github/stars/remote-android/redroid-doc?style=social&color=white)](https://github.com/remote-android/redroid-doc/stargazers)
+### 6. [redroid (Remote Android in Docker)](https://github.com/remote-android/redroid-doc) [![GitHub_Stars](https://img.shields.io/github/stars/remote-android/redroid-doc?style=social&color=white)](https://github.com/remote-android/redroid-doc/stargazers)
 - 📌 **Description**: GPU-accelerated AIC (Android in Cloud) runtime running isolated Android instances inside Docker containers.
 - ⚡ **Performance**: Native hardware acceleration via Intel/AMD/Nvidia GPUs and Mesa Gallium drivers for high-framerate rendering.
 - 🛠️ **Core Features**: Runs Android 8.1 through Android 14 images, exposes standard ADB interfaces, supports WebRTC and scrcpy client streaming, and scales horizontally across cloud infrastructure.
 - 🎯 **Best For**: Cloud gaming services, large-scale mobile bot farms, automated continuous app testing, and virtual mobile infrastructure.
 
-### 7. [idb (iOS Development Bridge)](https://github.com/facebook/idb) [![GitHub stars](https://img.shields.io/github/stars/facebook/idb?style=social&color=white)](https://github.com/facebook/idb/stargazers)
+### 7. [idb (iOS Development Bridge)](https://github.com/facebook/idb) [![GitHub_Stars](https://img.shields.io/github/stars/facebook/idb?style=social&color=white)](https://github.com/facebook/idb/stargazers)
 - 📌 **Description**: Powerful command-line interface and daemon developed by Meta for automating, inspecting, and controlling physical iOS devices and simulators.
 - ⚡ **Performance**: Low-overhead companion daemon running on macOS with a cross-platform client (Linux/macOS).
 - 🛠️ **Core Features**: Remote screen video capture, touch events and button press simulation, file synchronization, application lifecycle management, accessibility tree inspection, and port forwarding.
 - 🎯 **Best For**: iOS test automation engineers, CI/CD runners, and distributed cross-platform mobile testing environments.
 
-### 8. [sndcpy](https://github.com/rom1v/sndcpy) [![GitHub stars](https://img.shields.io/github/stars/rom1v/sndcpy?style=social&color=white)](https://github.com/rom1v/sndcpy/stargazers)
+### 8. [sndcpy](https://github.com/rom1v/sndcpy) [![GitHub_Stars](https://img.shields.io/github/stars/rom1v/sndcpy?style=social&color=white)](https://github.com/rom1v/sndcpy/stargazers)
 - 📌 **Description**: Dedicated Android audio forwarding tool for Android 10+ devices over ADB.
 - ⚡ **Performance**: Minimal buffer delay using Android's native MediaProjection audio capture API and VLC audio playback.
 - 🛠️ **Core Features**: Streams device audio directly to the computer speakers, requires no root access, and operates alongside scrcpy.
 - 🎯 **Best For**: Users of scrcpy on older setups or developers specifically requiring isolated audio stream capture.
 
-### 9. [guiscrcpy](https://github.com/srevinsaju/guiscrcpy) [![GitHub stars](https://img.shields.io/github/stars/srevinsaju/guiscrcpy?style=social&color=white)](https://github.com/srevinsaju/guiscrcpy/stargazers)
+### 9. [guiscrcpy](https://github.com/srevinsaju/guiscrcpy) [![GitHub_Stars](https://img.shields.io/github/stars/srevinsaju/guiscrcpy?style=social&color=white)](https://github.com/srevinsaju/guiscrcpy/stargazers)
 - 📌 **Description**: Feature-packed open-source Python GUI wrapper for scrcpy designed for cross-platform utility.
 - ⚡ **Performance**: Direct invocation of scrcpy binaries with zero CPU overhead from the GUI wrapper during streaming.
 - 🛠️ **Core Features**: Floating side panel with hardware navigation buttons (Back, Home, App Switcher), swipe panel for gesture execution, multi-device management with color coding, and persistent configuration presets.
 - 🎯 **Best For**: Power users navigating phones with damaged screens or physical buttons directly from their workstation.
 
-### 10. [MicroMDM](https://github.com/micromdm/micromdm) [![GitHub stars](https://img.shields.io/github/stars/micromdm/micromdm?style=social&color=white)](https://github.com/micromdm/micromdm/stargazers)
+### 10. [MicroMDM](https://github.com/micromdm/micromdm) [![GitHub_Stars](https://img.shields.io/github/stars/micromdm/micromdm?style=social&color=white)](https://github.com/micromdm/micromdm/stargazers)
 - 📌 **Description**: Lightweight open-source Mobile Device Management (MDM) server for Apple devices (macOS, iOS, iPadOS, and tvOS) written in Go.
 - ⚡ **Performance**: High-concurrency Go microservice designed for zero-latency Apple Push Notification service (APNs) dispatch.
 - 🛠️ **Core Features**: Apple MDM protocol compliance, Apple Device Enrollment Program (DEP) / Automated Device Enrollment (ADE) integration, configuration profile deployment, and remote lock/wipe commands.
 - 🎯 **Best For**: Sysadmins and engineering teams wanting to build custom, self-hosted Apple device fleet management stacks without per-seat licensing fees.
 
-### 11. [ws-scrcpy](https://github.com/NetrisTV/ws-scrcpy) [![GitHub stars](https://img.shields.io/github/stars/NetrisTV/ws-scrcpy?style=social&color=white)](https://github.com/NetrisTV/ws-scrcpy/stargazers)
+### 11. [ws-scrcpy](https://github.com/NetrisTV/ws-scrcpy) [![GitHub_Stars](https://img.shields.io/github/stars/NetrisTV/ws-scrcpy?style=social&color=white)](https://github.com/NetrisTV/ws-scrcpy/stargazers)
 - 📌 **Description**: Web-based scrcpy client that streams Android screens directly to any modern web browser via WebSockets and Broadway.js / H.264 decoders.
 - ⚡ **Performance**: Browser-native MSE (Media Source Extensions) decoding with interactive low-latency mouse and keyboard control.
 - 🛠️ **Core Features**: No desktop client installation needed for end users, multi-device web dashboard, touch event emulation, and containerized Docker deployment support.
 - 🎯 **Best For**: Remote browser-based customer tech support, internal device testing portals, and web app device demonstration.
 
-### 12. [Headwind MDM](https://github.com/h-mdm/hmdm-server) [![GitHub stars](https://img.shields.io/github/stars/h-mdm/hmdm-server?style=social&color=white)](https://github.com/h-mdm/hmdm-server/stargazers)
+### 12. [Headwind MDM](https://github.com/h-mdm/hmdm-server) [![GitHub_Stars](https://img.shields.io/github/stars/h-mdm/hmdm-server?style=social&color=white)](https://github.com/h-mdm/hmdm-server/stargazers)
 - 📌 **Description**: Open-source Mobile Device Management (MDM) and kiosk software specifically engineered for corporate Android device fleets.
 - ⚡ **Performance**: Java/Angular web control panel managing thousands of distributed Android edge devices.
 - 🛠️ **Core Features**: Silent enterprise APK updates, device owner provisioning via QR code, GPS location tracking, kiosk launcher lockdown, Wi-Fi configuration push, and remote log retrieval.
 - 🎯 **Best For**: Managing enterprise Android fleets such as POS terminals, logistics handhelds, warehouse barcode scanners, and public kiosks.
 
-### 13. [uiCY](https://github.com/DeRadian/uicy) [![GitHub stars](https://img.shields.io/github/stars/DeRadian/uicy?style=social&color=white)](https://github.com/DeRadian/uicy/stargazers)
+### 13. [uiCY](https://github.com/DeRadian/uicy) [![GitHub_Stars](https://img.shields.io/github/stars/DeRadian/uicy?style=social&color=white)](https://github.com/DeRadian/uicy/stargazers)
 - 📌 **Description**: Lightweight Python GUI bundling scrcpy video casting with sndcpy audio capture over a single USB connection.
 - 🛠️ **Core Features**: Streamlined one-click audio + video mirroring, designed for budget gamers and streamers needing an alternative to expensive capture cards at 480p/720p.
 - 🎯 **Best For**: Budget mobile streamers and content creators.
 
-### 14. [rscrcpy](https://github.com/naocancell/rscrcpy) [![GitHub stars](https://img.shields.io/github/stars/naocancell/rscrcpy?style=social&color=white)](https://github.com/naocancell/rscrcpy/stargazers)
+### 14. [rscrcpy](https://github.com/naocancell/rscrcpy) [![GitHub_Stars](https://img.shields.io/github/stars/naocancell/rscrcpy?style=social&color=white)](https://github.com/naocancell/rscrcpy/stargazers)
 - 📌 **Description**: Specialized root-enabled fork of scrcpy designed to bypass Android's `FLAG_SECURE` restrictions.
 - 🛠️ **Core Features**: Captures and mirrors protected display surfaces that normally block screenshots and recordings (such as banking interfaces and DRM media players).
 - 🎯 **Best For**: Security auditors, reverse engineers, and penetration testers operating on rooted test handsets.
@@ -213,7 +213,7 @@ Contributions are warmly welcomed! To suggest a new open-source project, SaaS pl
 3. 📝 **Add or edit entries in `README.md`**:
    - Maintain table formats and descending star/valuation rankings.
    - For SaaS tools: Include specific starting pricing and exact free tier/trial limits.
-   - For Open-Source tools: Include the official GitHub stars social badge linked to the repository stargazers page.
+   - For Open-Source tools: Include the official GitHub_Stars social badge linked to the repository stargazers page.
 4. ✅ **Ensure accuracy**: Verify links, pricing plans, and compatibility details.
 5. 🚀 **Submit a Pull Request** with a concise description of your additions.
 
@@ -276,7 +276,7 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
   **The Python GUI wrapper for scrcpy** — Apache 2.0 licensed. **Converts scrcpy's command-line complexity into a simple graphical interface** with checkboxes and settings menus . **Adds features scrcpy lacks**: **Swipe Panel** for horizontal/vertical swipes, **Toolkit side panel**, **Bottom Panel** for hardware navigation buttons, **multi-device support** with colored identification, **Network Manager** for internet connections, and **desktop shortcuts** . **Configuration files** persist settings across runs . **Best for users who want scrcpy's performance** without memorizing command-line flags — especially those on devices with hardware buttons or gesture navigation .
 
 - **[escrcpy](https://github.com/viarotel-org/escrcpy)**  
-  **The graphical scrcpy client powered by Electron** — 6,100+ GitHub stars . **Modern interface** over the scrcpy engine with **intelligent control via natural-language commands** (powered by AutoGLM), **automated workflow execution** with parallel operations across multiple devices, **multi-device window orchestration**, and **wireless connections with Gnirehtet reverse tethering** . **Best for users wanting a polished visual interface** over the scrcpy engine with active development and a large community.
+  **The graphical scrcpy client powered by Electron** — 6,100+ GitHub_Stars . **Modern interface** over the scrcpy engine with **intelligent control via natural-language commands** (powered by AutoGLM), **automated workflow execution** with parallel operations across multiple devices, **multi-device window orchestration**, and **wireless connections with Gnirehtet reverse tethering** . **Best for users wanting a polished visual interface** over the scrcpy engine with active development and a large community.
 
 - **[QtScrcpy](https://github.com/barry-ran/QtScrcpy)**  
   **The Qt-based graphical scrcpy client** — **asynchronous programming of Qt's signal-slot mechanism improves performance** . **Supports multi-touch**, screen recording, screenshots, full-screen display, always-on-top, APK installation via drag-and-drop, and bidirectional clipboard sync . **Prebuilt archives with all dependencies (including ADB) for Windows, macOS, and Linux** . **Best for users wanting a native Qt interface** with multi-touch support and straightforward USB/Wi-Fi connection workflow.
