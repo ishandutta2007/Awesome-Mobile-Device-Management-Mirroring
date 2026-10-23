@@ -1,0 +1,391 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Deep Gradient Background -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13" />
+      <stop offset="40%" stop-color="#0d1424" />
+      <stop offset="80%" stop-color="#12132e" />
+      <stop offset="100%" stop-color="#180e2b" />
+    </linearGradient>
+
+    <!-- Title and Glow Gradients -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#f0f6fc" />
+      <stop offset="100%" stop-color="#bae6fd" />
+    </linearGradient>
+
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="45%" stop-color="#818cf8" />
+      <stop offset="80%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+
+    <linearGradient id="deviceBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="streamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2" />
+      <stop offset="30%" stop-color="#38bdf8" />
+      <stop offset="70%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="accentCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+
+    <radialGradient id="auroraGlow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
+      <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="auroraGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#8b5cf6" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+
+    <!-- CSS Keyframe Animations -->
+    <style>
+      @keyframes pulseAura {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.7; transform: scale(1.08); }
+      }
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes floatOpposite {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(6px); }
+      }
+      @keyframes streamFlow {
+        0% { stroke-dashoffset: 140; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes radarPing {
+        0% { r: 6; opacity: 1; }
+        100% { r: 28; opacity: 0; }
+      }
+      @keyframes scanVertical {
+        0% { transform: translateY(0); opacity: 0.2; }
+        50% { opacity: 0.8; }
+        100% { transform: translateY(140px); opacity: 0.2; }
+      }
+      @keyframes blinkGlow {
+        0%, 100% { opacity: 1; filter: drop-shadow(0 0 4px #10b981); }
+        50% { opacity: 0.4; filter: none; }
+      }
+      @keyframes packetTravel {
+        0% { offset-distance: 0%; opacity: 0; }
+        15% { opacity: 1; }
+        85% { opacity: 1; }
+        100% { offset-distance: 100%; opacity: 0; }
+      }
+
+      .pulse-aura1 { animation: pulseAura 6s ease-in-out infinite; transform-origin: 900px 180px; }
+      .pulse-aura2 { animation: pulseAura 7s ease-in-out infinite reverse; transform-origin: 300px 100px; }
+      .anim-float-main { animation: floatSlow 6s ease-in-out infinite; }
+      .anim-float-badge1 { animation: floatSlow 5s ease-in-out infinite; }
+      .anim-float-badge2 { animation: floatOpposite 5.5s ease-in-out infinite; }
+      .anim-stream {
+        stroke-dasharray: 10 8;
+        animation: streamFlow 2.2s linear infinite;
+      }
+      .anim-stream-fast {
+        stroke-dasharray: 6 6;
+        animation: streamFlow 1.4s linear infinite;
+      }
+      .anim-ring {
+        animation: radarPing 2.6s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+      }
+      .anim-scan {
+        animation: scanVertical 3s ease-in-out infinite alternate;
+      }
+      .anim-blink {
+        animation: blinkGlow 2s ease-in-out infinite;
+      }
+      .font-tech {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+      .font-mono {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+      }
+    </style>
+  </defs>
+
+  <!-- Banner Container Box -->
+  <rect width="1200" height="420" rx="20" fill="url(#bgGradient)" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Subtle Blueprint Tech Grid in Background -->
+  <g opacity="0.06" stroke="#94a3b8" stroke-width="1">
+    <path d="M 0,40 L 1200,40 M 0,80 L 1200,80 M 0,120 L 1200,120 M 0,160 L 1200,160 M 0,200 L 1200,200 M 0,240 L 1200,240 M 0,280 L 1200,280 M 0,320 L 1200,320 M 0,360 L 1200,360 M 0,400 L 1200,400" />
+    <path d="M 60,0 L 60,420 M 120,0 L 120,420 M 180,0 L 180,420 M 240,0 L 240,420 M 300,0 L 300,420 M 360,0 L 360,420 M 420,0 L 420,420 M 480,0 L 480,420 M 540,0 L 540,420 M 600,0 L 600,420 M 660,0 L 660,420 M 720,0 L 720,420 M 780,0 L 780,420 M 840,0 L 840,420 M 900,0 L 900,420 M 960,0 L 960,420 M 1020,0 L 1020,420 M 1080,0 L 1080,420 M 1140,0 L 1140,420" />
+  </g>
+
+  <!-- Dynamic Ambient Glowing Orbs -->
+  <circle class="pulse-aura1" cx="950" cy="200" r="220" fill="url(#auroraGlow1)" />
+  <circle class="pulse-aura2" cx="300" cy="110" r="190" fill="url(#auroraGlow2)" />
+  <circle cx="1080" cy="80" r="160" fill="url(#auroraGlow1)" opacity="0.4" />
+
+  <!-- ========================================================================= -->
+  <!-- RIGHT SIDE: DYNAMIC VISUAL MOCKUP & FLOW GRAPH (x=670 to 1170)            -->
+  <!-- ========================================================================= -->
+  <g class="anim-float-main font-tech" transform="translate(680, 40)" filter="url(#subtleShadow)">
+
+    <!-- Workstation / Central Host Monitor (Mirroring Receiver) -->
+    <g transform="translate(180, 25)">
+      <!-- Monitor Stand -->
+      <path d="M 115,225 L 145,225 L 152,270 L 108,270 Z" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+      <rect x="75" y="270" width="110" height="8" rx="4" fill="#0f172a" stroke="#475569" stroke-width="1.2" />
+
+      <!-- Monitor Chassis -->
+      <rect x="0" y="0" width="260" height="225" rx="14" fill="#0b1120" stroke="url(#deviceBorderGrad)" stroke-width="2" />
+      
+      <!-- Inner Screen Bezel -->
+      <rect x="8" y="8" width="244" height="209" rx="8" fill="#020617" />
+
+      <!-- Top Window Titlebar -->
+      <rect x="8" y="8" width="244" height="24" rx="8" fill="#1e293b" />
+      <rect x="8" y="24" width="244" height="8" fill="#1e293b" />
+      <circle cx="22" cy="20" r="4" fill="#ef4444" />
+      <circle cx="36" cy="20" r="4" fill="#f59e0b" />
+      <circle cx="50" cy="20" r="4" fill="#10b981" />
+      <text x="64" y="24" fill="#94a3b8" font-size="9.5" font-weight="600" class="font-mono">scrcpy // 192.168.1.104:5555</text>
+      <circle cx="238" cy="20" r="3.5" fill="#10b981" class="anim-blink" />
+
+      <!-- Split View inside Monitor -->
+      <!-- Left: Screen Mirror Display from Phone -->
+      <g transform="translate(16, 40)">
+        <rect width="94" height="168" rx="7" fill="#090d16" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.8" />
+        <!-- Screen Content Wireframe mirroring Phone -->
+        <rect x="6" y="8" width="82" height="22" rx="4" fill="#38bdf8" fill-opacity="0.25" stroke="#38bdf8" stroke-width="0.8" />
+        <text x="12" y="22" fill="#38bdf8" font-size="8" font-weight="700">DEV #01 ACTIVE</text>
+        <circle cx="78" cy="19" r="3" fill="#10b981" />
+
+        <!-- Mini App Grid Wireframe -->
+        <rect x="6" y="36" width="38" height="18" rx="3" fill="#1e293b" />
+        <rect x="50" y="36" width="38" height="18" rx="3" fill="#1e293b" />
+        <rect x="6" y="60" width="82" height="42" rx="4" fill="#131e36" stroke="#334155" stroke-width="0.7" />
+        
+        <!-- Live Graph lines inside Mirror Display -->
+        <path d="M 12,92 L 28,78 L 44,85 L 60,68 L 76,74" fill="none" stroke="#818cf8" stroke-width="1.5" />
+        <circle cx="76" cy="74" r="2" fill="#c084fc" />
+
+        <rect x="6" y="108" width="82" height="22" rx="3" fill="#1e293b" />
+        <rect x="6" y="136" width="82" height="22" rx="3" fill="#1e293b" />
+
+        <!-- Animated Scanner Beam on Mirrored Screen -->
+        <line x1="6" y1="20" x2="88" y2="20" stroke="#38bdf8" stroke-width="1.8" class="anim-scan" filter="url(#softGlow)" />
+      </g>
+
+      <!-- Right: Real-time Telemetry & Stream Metrics Panel -->
+      <g transform="translate(118, 40)">
+        <rect width="126" height="168" rx="7" fill="#090e1c" stroke="#334155" stroke-width="0.8" />
+        
+        <!-- Header -->
+        <text x="10" y="18" fill="#38bdf8" font-size="9" font-weight="700" letter-spacing="1">STREAM STATS</text>
+        <line x1="10" y1="24" x2="116" y2="24" stroke="#1e293b" stroke-width="1" />
+
+        <!-- Telemetry Items -->
+        <text x="10" y="40" fill="#94a3b8" font-size="8" class="font-mono">FPS</text>
+        <text x="62" y="40" fill="#34d399" font-size="9" font-weight="700" class="font-mono">120.0</text>
+
+        <text x="10" y="56" fill="#94a3b8" font-size="8" class="font-mono">LATENCY</text>
+        <text x="62" y="56" fill="#34d399" font-size="9" font-weight="700" class="font-mono">24 ms</text>
+
+        <text x="10" y="72" fill="#94a3b8" font-size="8" class="font-mono">RES</text>
+        <text x="62" y="72" fill="#f8fafc" font-size="8.5" font-weight="600" class="font-mono">2400×1080</text>
+
+        <text x="10" y="88" fill="#94a3b8" font-size="8" class="font-mono">BITRATE</text>
+        <text x="62" y="88" fill="#f8fafc" font-size="8.5" font-weight="600" class="font-mono">16 Mbps</text>
+
+        <text x="10" y="104" fill="#94a3b8" font-size="8" class="font-mono">CODEC</text>
+        <text x="62" y="104" fill="#c084fc" font-size="8.5" font-weight="600" class="font-mono">H.265 / AV1</text>
+
+        <text x="10" y="120" fill="#94a3b8" font-size="8" class="font-mono">PROTOCOL</text>
+        <text x="62" y="120" fill="#38bdf8" font-size="8.5" font-weight="600" class="font-mono">ADB TCP/IP</text>
+
+        <!-- Progress / Buffer Bar -->
+        <rect x="10" y="130" width="106" height="5" rx="2.5" fill="#1e293b" />
+        <rect x="10" y="130" width="86" height="5" rx="2.5" fill="#38bdf8" />
+
+        <!-- Protocol Security Status Tag -->
+        <rect x="10" y="143" width="106" height="17" rx="4" fill="#064e3b" fill-opacity="0.5" stroke="#059669" stroke-width="0.8" />
+        <circle cx="18" cy="151.5" r="2.5" fill="#34d399" />
+        <text x="25" y="155" fill="#a7f3d0" font-size="7.5" font-weight="700">AES-256 ENCRYPTED</text>
+      </g>
+    </g>
+
+    <!-- Source Mobile Phone (Physical Device on Left of Visual Group) -->
+    <g transform="translate(10, 60)">
+      <!-- Outer Phone Body -->
+      <rect x="0" y="0" width="112" height="226" rx="22" fill="#0f172a" stroke="url(#deviceBorderGrad)" stroke-width="2.5" />
+      <!-- Screen Glass -->
+      <rect x="6" y="6" width="100" height="214" rx="17" fill="#030712" />
+
+      <!-- Dynamic Island / Speaker Notch -->
+      <rect x="36" y="12" width="40" height="9" rx="4.5" fill="#1e293b" />
+      <circle cx="43" cy="16.5" r="2.5" fill="#38bdf8" />
+      <circle cx="69" cy="16.5" r="1.5" fill="#475569" />
+
+      <!-- Mobile UI Content -->
+      <g transform="translate(12, 28)">
+        <!-- Top App Header -->
+        <rect x="0" y="0" width="88" height="24" rx="5" fill="#38bdf8" fill-opacity="0.25" stroke="#38bdf8" stroke-width="0.8" />
+        <text x="8" y="15" fill="#38bdf8" font-size="8.5" font-weight="700">DEV #01 ACTIVE</text>
+        <circle cx="78" cy="12" r="3" fill="#10b981" />
+
+        <!-- Quick Stats Cards in phone -->
+        <rect x="0" y="30" width="41" height="20" rx="4" fill="#1e293b" />
+        <text x="5" y="43" fill="#94a3b8" font-size="7.5">BAT: 98%</text>
+        
+        <rect x="47" y="30" width="41" height="20" rx="4" fill="#1e293b" />
+        <text x="52" y="43" fill="#38bdf8" font-size="7.5">5G UW</text>
+
+        <!-- Dynamic Chart Box -->
+        <rect x="0" y="56" width="88" height="46" rx="5" fill="#131e36" stroke="#334155" stroke-width="0.8" />
+        <path d="M 6,90 L 24,75 L 42,82 L 60,65 L 80,70" fill="none" stroke="#818cf8" stroke-width="1.8" />
+        <circle cx="80" cy="70" r="2.5" fill="#c084fc" />
+
+        <!-- Mock Menu List Items -->
+        <rect x="0" y="108" width="88" height="24" rx="4" fill="#1e293b" />
+        <circle cx="10" cy="120" r="4" fill="#6366f1" />
+        <text x="18" y="123" fill="#cbd5e1" font-size="8">Touch Passthrough</text>
+
+        <rect x="0" y="138" width="88" height="24" rx="4" fill="#1e293b" />
+        <circle cx="10" cy="150" r="4" fill="#10b981" />
+        <text x="18" y="153" fill="#cbd5e1" font-size="8">Kiosk Mode Locked</text>
+
+        <!-- Home Indicator Pill -->
+        <rect x="24" y="172" width="40" height="3" rx="1.5" fill="#64748b" />
+      </g>
+
+      <!-- Wireless Signal Ring emitting from phone -->
+      <circle cx="56" cy="120" r="10" fill="none" stroke="#38bdf8" stroke-width="1.5" class="anim-ring" />
+      <circle cx="56" cy="120" r="4" fill="#38bdf8" />
+    </g>
+
+    <!-- Animated Data Connection Stream between Phone and Workstation -->
+    <g>
+      <!-- Background Guide Path -->
+      <path d="M 122,170 C 150,170 155,145 196,145" fill="none" stroke="#1e293b" stroke-width="5" />
+      <!-- Glowing Animated Primary Stream -->
+      <path class="anim-stream" d="M 122,170 C 150,170 155,145 196,145" fill="none" stroke="url(#streamGrad)" stroke-width="3.5" filter="url(#softGlow)" />
+      <!-- Fast Accent Stream -->
+      <path class="anim-stream-fast" d="M 122,170 C 150,170 155,145 196,145" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+      
+      <!-- Flow Data Pulse Node -->
+      <circle cx="158" cy="158" r="4.5" fill="#38bdf8" filter="url(#softGlow)" />
+      <circle cx="158" cy="158" r="2" fill="#ffffff" />
+    </g>
+
+    <!-- Floating MDM Fleet Status Pill (Top Left of visual cluster) -->
+    <g class="anim-float-badge1" transform="translate(18, -12)">
+      <rect width="180" height="32" rx="16" fill="url(#accentCardGrad)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.8" />
+      <circle cx="16" cy="16" r="4.5" fill="#10b981" class="anim-blink" />
+      <text x="28" y="20" fill="#f8fafc" font-size="10.5" font-weight="700">DEVICE LAB: 14 NODES</text>
+    </g>
+
+    <!-- Floating Enterprise Policy Pill (Bottom Right of visual cluster) -->
+    <g class="anim-float-badge2" transform="translate(240, 275)">
+      <rect width="190" height="32" rx="16" fill="url(#accentCardGrad)" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.8" />
+      <text x="14" y="20" fill="#c084fc" font-size="12">🛡️</text>
+      <text x="32" y="20" fill="#e2e8f0" font-size="10.5" font-weight="600">ZERO-TOUCH ENROLLED</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LEFT SIDE: FOREGROUND TYPOGRAPHY & BADGES (x=50 to 650)                   -->
+  <!-- Strictly in foreground, distinct layer order ensures 100% readability     -->
+  <!-- ========================================================================= -->
+  <g class="font-tech" transform="translate(55, 45)">
+
+    <!-- Category Pill Badge -->
+    <g transform="translate(0, 5)">
+      <rect width="320" height="32" rx="16" fill="#111827" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.9" />
+      <circle cx="16" cy="16" r="4" fill="#38bdf8" />
+      <text x="28" y="21" fill="#38bdf8" font-size="10.5" font-weight="700" letter-spacing="1.2">
+        UNIFIED ENDPOINT CONTROL &amp; STREAMING
+      </text>
+    </g>
+
+    <!-- Main Title Lines -->
+    <text x="0" y="88" fill="url(#titleGrad)" font-size="40" font-weight="900" letter-spacing="-1">
+      Mobile Device Management
+    </text>
+    <text x="0" y="138" fill="url(#brandGrad)" font-size="38" font-weight="900" letter-spacing="-0.8">
+      &amp; Screen Mirroring
+    </text>
+
+    <!-- Subtitle Lines -->
+    <text x="0" y="180" fill="#cbd5e1" font-size="15.5" font-weight="500">
+      Curated directory of enterprise SaaS suites, native protocols, and open-source tools
+    </text>
+    <text x="0" y="206" fill="#94a3b8" font-size="13.5" font-weight="400">
+      Zero-latency ADB bridge • Enterprise UEM / Kiosk lockdown • Self-hosted device farms
+    </text>
+
+    <!-- Horizontal Separator -->
+    <line x1="0" y1="230" x2="550" y2="230" stroke="#334155" stroke-width="1" stroke-opacity="0.8" />
+
+    <!-- Feature Pills Grid (Row 1 & Row 2) - Safely in lower foreground area -->
+    <g transform="translate(0, 248)">
+      <!-- Pill 1: Latency -->
+      <g transform="translate(0, 0)">
+        <rect width="160" height="32" rx="8" fill="#1e293b" fill-opacity="0.85" stroke="#334155" stroke-width="1" />
+        <text x="12" y="20" fill="#38bdf8" font-size="13">⚡</text>
+        <text x="32" y="20" fill="#e2e8f0" font-size="11.5" font-weight="600">&lt; 35ms Low Latency</text>
+      </g>
+
+      <!-- Pill 2: 120 FPS Mirroring -->
+      <g transform="translate(170, 0)">
+        <rect width="150" height="32" rx="8" fill="#1e293b" fill-opacity="0.85" stroke="#334155" stroke-width="1" />
+        <text x="12" y="20" fill="#10b981" font-size="13">🎮</text>
+        <text x="32" y="20" fill="#e2e8f0" font-size="11.5" font-weight="600">120 FPS Mirrored</text>
+      </g>
+
+      <!-- Pill 3: Enterprise UEM -->
+      <g transform="translate(330, 0)">
+        <rect width="155" height="32" rx="8" fill="#1e293b" fill-opacity="0.85" stroke="#334155" stroke-width="1" />
+        <text x="12" y="20" fill="#f43f5e" font-size="13">🛡️</text>
+        <text x="32" y="20" fill="#e2e8f0" font-size="11.5" font-weight="600">Zero-Trust MDM</text>
+      </g>
+
+      <!-- Row 2 -->
+      <!-- Pill 4: Open Source -->
+      <g transform="translate(0, 42)">
+        <rect width="185" height="32" rx="8" fill="#1e293b" fill-opacity="0.85" stroke="#334155" stroke-width="1" />
+        <text x="12" y="20" fill="#a855f7" font-size="13">💻</text>
+        <text x="32" y="20" fill="#e2e8f0" font-size="11.5" font-weight="600">Open-Source &amp; SaaS</text>
+      </g>
+
+      <!-- Pill 5: Device Farms -->
+      <g transform="translate(195, 42)">
+        <rect width="185" height="32" rx="8" fill="#1e293b" fill-opacity="0.85" stroke="#334155" stroke-width="1" />
+        <text x="12" y="20" fill="#38bdf8" font-size="13">🌐</text>
+        <text x="32" y="20" fill="#e2e8f0" font-size="11.5" font-weight="600">Multi-Device Farms</text>
+      </g>
+    </g>
+  </g>
+</svg>
