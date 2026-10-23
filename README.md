@@ -66,7 +66,7 @@ The table below outlines leading commercial SaaS and cloud-managed endpoint mana
 
 The following curated open-source projects provide native Android screen mirroring, Apple MDM services, reverse tethering, containerized Android instances, and multi-device testing farms. 
 
-Repos are sorted in descending order by **GitHub Stars_Counts** ⭐.
+Repos are sorted in descending order by **GitHub_Stars_Counts** ⭐.
 
 ### 1. [scrcpy](https://github.com/Genymobile/scrcpy) [![GitHub_Stars](https://img.shields.io/github/stars/Genymobile/scrcpy?style=social&color=white)](https://github.com/Genymobile/scrcpy/stargazers)
 - 📌 **Description**: The industry standard for native Android screen mirroring and control over USB or TCP/IP. Requires no root, no app installed on the device, no accounts, and no internet connection.
